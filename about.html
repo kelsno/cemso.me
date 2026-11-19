@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cemso.me — about me</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #666666;
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            padding: 24px 20px;
+        }
+
+        .wrapper {
+            width: 780px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 13.5px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        html[lang="ja"] .nav-left {
+            gap: 14px;
+        }
+
+        .nav-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #b5b5b5;
+            font-weight: 400;
+            transition: color 0.15s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #666666;
+        }
+
+        .lang-switcher {
+            margin-top: 4px;
+            font-size: 9.5px;
+            letter-spacing: 0.01em;
+            color: #cccccc;
+            line-height: 1.2;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+            font-size: 9.5px;
+            color: #b5b5b5;
+            cursor: pointer;
+            letter-spacing: -0.01em;
+            transition: color 0.15s ease;
+        }
+
+        .lang-btn:hover {
+            color: #666666;
+        }
+
+        .lang-btn.active {
+            color: #ef5a28;
+            font-weight: 700;
+        }
+
+        .lang-sep {
+            margin: 0 3px;
+            color: #cccccc;
+        }
+
+        h1.page-title {
+            font-size: 62px;
+            font-weight: 700;
+            color: #777777;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .content-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+
+        .card-main {
+            width: 430px;
+            background-color: #efefef;
+            padding: 22px 26px 24px;
+        }
+
+        .card-main h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+        }
+
+        .card-main p {
+            font-size: 11px;
+            line-height: 1.44;
+            color: #666666;
+            margin-bottom: 11px;
+        }
+
+        .card-main p:last-of-type {
+            margin-bottom: 16px;
+        }
+
+        .card-callout {
+            width: 222px;
+            background-color: #ef5a28;
+            padding: 20px 20px 22px;
+            margin-top: 18px;
+            margin-right: 45px;
+            color: #ffffff;
+        }
+
+        .card-callout h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .card-callout p {
+            font-size: 11px;
+            line-height: 1.42;
+            color: #ffffff;
+            margin-bottom: 18px;
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-link .arrow-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 17px;
+            height: 17px;
+            border-radius: 2px;
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .cta-dark {
+            color: #222222;
+        }
+
+        .cta-dark .arrow-icon {
+            background-color: #ef5a28;
+            color: #ffffff;
+        }
+
+        .cta-callout {
+            color: #222222;
+        }
+
+        .cta-callout .arrow-icon {
+            background-color: #ffffff;
+            color: #ef5a28;
+        }
+
+        footer {
+            font-size: 9px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html" data-i18n="nav_work">my work:</a>
+                <a href="graphic-design.html" data-i18n="nav_graphic">graphic design</a>
+                <a href="photography.html" data-i18n="nav_photo">photography</a>
+                <a href="ee.html" data-i18n="nav_ee">electrical engineering</a>
+                <a href="https://chudbox.us" target="_blank" rel="noopener noreferrer" data-i18n="nav_chud">CHUDbox</a>
+                <a href="about.html" class="active" data-i18n="nav_about">; about me</a>
+            </div>
+            <div class="nav-right">
+                <a href="#contact" data-i18n="nav_contact">contact</a>
+                <div class="lang-switcher" aria-label="Language selector">
+                    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-sep">/</span>
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                    <span class="lang-sep">/</span>
+                    <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="page-title" data-i18n="page_heading">about me</h1>
+
+    <main class="content-columns">
+        <section class="card-main">
+            <h2 data-i18n="card_title">christopher e. morales soriano</h2>
+            <p data-i18n="p1">
+                Based in Greater Boston, I work across hardware engineering, RF and analog video experiments, graphic design, and still/motion photography.
+            </p>
+            <p data-i18n="p2">
+                I like taking older machines, circuits, and formats apart to understand how they work—and building tools or media around them.
+            </p>
+            <p data-i18n="p3">
+                This site documents both finished work and raw bench experiments under @cemso and @kelsoitin.
+            </p>
+            <a href="index.html" class="cta-link cta-dark">
+                <span class="arrow-icon">&#8594;</span>
+                <span data-i18n="cta_back">back home</span>
+            </a>
+        </section>
+
+        <aside class="card-callout">
+            <h2 data-i18n="callout_title">links</h2>
+            <p data-i18n="callout_body">
+                Jump straight to CHUDbox or browse my photo feed in the VSCO-style grid.
+            </p>
+            <a href="https://chudbox.us" target="_blank" rel="noopener noreferrer" class="cta-link cta-callout">
+                <span class="arrow-icon">&#8594;</span>
+                <span data-i18n="cta_go">chudbox.us</span>
+            </a>
+        </aside>
+    </main>
+
+    <footer id="contact">
+        &copy; 2026 Christopher Morales Soriano @cemso / @kelsoitin
+    </footer>
+</div>
+
+<script>
+    const translations = {
+        en: {
+            nav_work: "my work:",
+            nav_graphic: "graphic design",
+            nav_photo: "photography",
+            nav_ee: "electrical engineering",
+            nav_chud: "CHUDbox",
+            nav_about: "; about me",
+            nav_contact: "contact",
+            page_heading: "about me",
+            card_title: "christopher e. morales soriano",
+            p1: "Based in Greater Boston, I work across hardware engineering, RF and analog video experiments, graphic design, and still/motion photography.",
+            p2: "I like taking older machines, circuits, and formats apart to understand how they work—and building tools or media around them.",
+            p3: "This site documents both finished work and raw bench experiments under @cemso and @kelsoitin.",
+            cta_back: "back home",
+            callout_title: "links",
+            callout_body: "Jump straight to CHUDbox or browse my photo feed in the VSCO-style grid.",
+            cta_go: "chudbox.us"
+        },
+        es: {
+            nav_work: "mi trabajo:",
+            nav_graphic: "diseño gráfico",
+            nav_photo: "fotografía",
+            nav_ee: "ingeniería eléctrica",
+            nav_chud: "CHUDbox",
+            nav_about: "; sobre mí",
+            nav_contact: "contacto",
+            page_heading: "sobre mí",
+            card_title: "christopher e. morales soriano",
+            p1: "En el área de Boston trabajo entre ingeniería de hardware, experimentos de RF y video analógico, diseño gráfico y fotografía.",
+            p2: "Me interesa desarmar equipos, circuitos y formatos antiguos para entenderlos y crear proyectos a partir de ellos.",
+            p3: "Aquí reúno tanto trabajos terminados como pruebas de banco bajo @cemso y @kelsoitin.",
+            cta_back: "volver al inicio",
+            callout_title: "enlaces",
+            callout_body: "Ve directo a CHUDbox o explora las fotos en el estilo de cuadrícula.",
+            cta_go: "chudbox.us"
+        },
+        ja: {
+            nav_work: "制作実績:",
+            nav_graphic: "グラフィックデザイン",
+            nav_photo: "写真",
+            nav_ee: "電気工学",
+            nav_chud: "CHUDbox",
+            nav_about: "; 自己紹介",
+            nav_contact: "連絡先",
+            page_heading: "自己紹介",
+            card_title: "christopher e. morales soriano",
+            p1: "ボストン圏を拠点に、ハードウェア工学、RFやアナログ映像の実験、グラフィックデザイン、写真に取り組んでいます。",
+            p2: "古い機器や回路、メディアの仕組みを調べて、新しい形に活かすのが好きです。",
+            p3: "@cemso / @kelsoitin として、制作物や実験の記録をまとめています。",
+            cta_back: "ホームへ戻る",
+            callout_title: "リンク",
+            callout_body: "CHUDbox サイトへ移動するか、写真ページをご覧ください。",
+            cta_go: "chudbox.us"
+        }
+    };
+
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const lang = btn.dataset.lang;
+            document.documentElement.lang = lang;
+            document.querySelectorAll(".lang-btn").forEach((b) => b.classList.toggle("active", b === btn));
+            document.querySelectorAll("[data-i18n]").forEach((el) => {
+                const key = el.dataset.i18n;
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cemso.me — graphic design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #666666;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px 20px;
+    }
+
+    .wrapper {
+      width: 780px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 13.5px;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-left {
+      display: flex;
+      gap: 20px;
+    }
+
+    html[lang="ja"] .nav-left {
+      gap: 14px;
+    }
+
+    .nav-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #b5b5b5;
+      font-weight: 400;
+      transition: color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #666666;
+    }
+
+    .lang-switcher {
+      margin-top: 4px;
+      font-size: 9.5px;
+      letter-spacing: 0.01em;
+      color: #cccccc;
+      line-height: 1.2;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+      font-size: 9.5px;
+      color: #b5b5b5;
+      cursor: pointer;
+      letter-spacing: -0.01em;
+      transition: color 0.15s ease;
+    }
+
+    .lang-btn:hover {
+      color: #666666;
+    }
+
+    .lang-btn.active {
+      color: #ef5a28;
+      font-weight: 700;
+    }
+
+    .lang-sep {
+      margin: 0 3px;
+      color: #cccccc;
+    }
+
+    h1.page-title {
+      font-size: 62px;
+      font-weight: 700;
+      color: #777777;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .content-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .card-main {
+      width: 430px;
+      background-color: #efefef;
+      padding: 22px 26px 24px;
+    }
+
+    .card-main h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333333;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .card-main p {
+      font-size: 11px;
+      line-height: 1.44;
+      color: #666666;
+      margin-bottom: 11px;
+    }
+
+    .card-main p:last-of-type {
+      margin-bottom: 16px;
+    }
+
+    .card-callout {
+      width: 222px;
+      background-color: #ef5a28;
+      padding: 20px 20px 22px;
+      margin-top: 18px;
+      margin-right: 45px;
+      color: #ffffff;
+    }
+
+    .card-callout h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .card-callout p {
+      font-size: 11px;
+      line-height: 1.42;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-link .arrow-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px;
+      height: 17px;
+      border-radius: 2px;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .cta-dark {
+      color: #222222;
+    }
+
+    .cta-dark .arrow-icon {
+      background-color: #ef5a28;
+      color: #ffffff;
+    }
+
+    .cta-callout {
+      color: #222222;
+    }
+
+    .cta-callout .arrow-icon {
+      background-color: #ffffff;
+      color: #ef5a28;
+    }
+
+    .design-strip {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .design-box {
+      position: relative;
+      width: 250px;
+      height: 150px;
+      background-color: #efefef;
+      border: 1px dashed #c4c4c4;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      color: #777777;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .design-box img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      font-size: 9px;
+      color: #999999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" data-i18n="nav_work">my work:</a>
+        <a href="graphic-design.html" class="active" data-i18n="nav_graphic">graphic design</a>
+        <a href="photography.html" data-i18n="nav_photo">photography</a>
+        <a href="ee.html" data-i18n="nav_ee">electrical engineering</a>
+        <a href="https://chudbox.us" target="_blank" rel="noopener noreferrer" data-i18n="nav_chud">CHUDbox</a>
+        <a href="about.html" data-i18n="nav_about">; about me</a>
+      </div>
+      <div class="nav-right">
+        <a href="#contact" data-i18n="nav_contact">contact</a>
+        <div class="lang-switcher" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <h1 class="page-title" data-i18n="page_heading">graphic design</h1>
+
+  <main class="content-columns">
+    <section class="card-main">
+      <h2 data-i18n="card_title">identity, print &amp; layout</h2>
+      <p data-i18n="p1">
+        Logos, industrial marks, flyers, posters, and editorial layouts built around tight grids, clear hierarchy, and punchy contrast.
+      </p>
+      <p data-i18n="p2">
+        Influenced by mid-century hardware markings, early-2000s web interfaces, and Swiss typographic discipline—kept practical and readable.
+      </p>
+      <a href="index.html" class="cta-link cta-dark">
+        <span class="arrow-icon">&#8594;</span>
+        <span data-i18n="cta_back">back home</span>
+      </a>
+    </section>
+
+    <aside class="card-callout">
+      <h2 data-i18n="callout_title">print &amp; brand</h2>
+      <p data-i18n="callout_body">
+        Need a mark, event flyer, or layout system for a project or club? Send over the brief and dimensions.
+      </p>
+      <a href="photography.html" class="cta-link cta-callout">
+        <span class="arrow-icon">&#8594;</span>
+        <span data-i18n="cta_go">photos</span>
+      </a>
+    </aside>
+  </main>
+
+  <section class="design-strip">
+    <div class="design-box">Design Piece 01</div>
+    <div class="design-box">Design Piece 02</div>
+    <div class="design-box">Design Piece 03</div>
+  </section>
+
+  <footer id="contact">
+    &copy; 2026 Christopher Morales Soriano @cemso / @kelsoitin
+  </footer>
+</div>
+
+<script>
+  const translations = {
+    en: {
+      nav_work: "my work:",
+      nav_graphic: "graphic design",
+      nav_photo: "photography",
+      nav_ee: "electrical engineering",
+      nav_chud: "CHUDbox",
+      nav_about: "; about me",
+      nav_contact: "contact",
+      page_heading: "graphic design",
+      card_title: "identity, print & layout",
+      p1: "Logos, industrial marks, flyers, posters, and editorial layouts built around tight grids, clear hierarchy, and punchy contrast.",
+      p2: "Influenced by mid-century hardware markings, early-2000s web interfaces, and Swiss typographic discipline—kept practical and readable.",
+      cta_back: "back home",
+      callout_title: "print & brand",
+      callout_body: "Need a mark, event flyer, or layout system for a project or club? Send over the brief and dimensions.",
+      cta_go: "photos"
+    },
+    es: {
+      nav_work: "mi trabajo:",
+      nav_graphic: "diseño gráfico",
+      nav_photo: "fotografía",
+      nav_ee: "ingeniería eléctrica",
+      nav_chud: "CHUDbox",
+      nav_about: "; sobre mí",
+      nav_contact: "contacto",
+      page_heading: "diseño gráfico",
+      card_title: "identidad, imprenta y maquetación",
+      p1: "Logotipos, marcas industriales, carteles, volantes y composiciones editoriales con retículas ajustadas, jerarquía clara y contraste.",
+      p2: "Con influencia de rotulado de hardware clásico, interfaces web de los 2000 y disciplina tipográfica.",
+      cta_back: "volver al inicio",
+      callout_title: "marca e imprenta",
+      callout_body: "¿Necesitas un logotipo, cartel o sistema visual para un proyecto o club? Envía la idea y medidas.",
+      cta_go: "fotos"
+    },
+    ja: {
+      nav_work: "制作実績:",
+      nav_graphic: "グラフィックデザイン",
+      nav_photo: "写真",
+      nav_ee: "電気工学",
+      nav_chud: "CHUDbox",
+      nav_about: "; 自己紹介",
+      nav_contact: "連絡先",
+      page_heading: "グラフィックデザイン",
+      card_title: "ロゴ・印刷物・レイアウト",
+      p1: "グリッドや階層、コントラストを重視したロゴ、フライヤー、ポスター、エディトリアルデザインを制作しています。",
+      p2: "レトロな機器表記や2000年代のウェブデザイン、タイポグラフィの要素を取り入れています。",
+      cta_back: "ホームへ戻る",
+      callout_title: "制作相談",
+      callout_body: "プロジェクトやイベント向けのロゴやフライヤー制作について、要件とサイズをお知らせください。",
+      cta_go: "写真へ"
+    }
+  };
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang-btn").forEach((b) => b.classList.toggle("active", b === btn));
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

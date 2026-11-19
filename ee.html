@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cemso.me — electrical engineering</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #666666;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px 20px;
+    }
+
+    .wrapper {
+      width: 780px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 24px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 13.5px;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-left {
+      display: flex;
+      gap: 20px;
+    }
+
+    html[lang="ja"] .nav-left {
+      gap: 14px;
+    }
+
+    .nav-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #b5b5b5;
+      font-weight: 400;
+      transition: color 0.15s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #666666;
+    }
+
+    .lang-switcher {
+      margin-top: 4px;
+      font-size: 9.5px;
+      letter-spacing: 0.01em;
+      color: #cccccc;
+      line-height: 1.2;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+      font-size: 9.5px;
+      color: #b5b5b5;
+      cursor: pointer;
+      letter-spacing: -0.01em;
+      transition: color 0.15s ease;
+    }
+
+    .lang-btn:hover {
+      color: #666666;
+    }
+
+    .lang-btn.active {
+      color: #ef5a28;
+      font-weight: 700;
+    }
+
+    .lang-sep {
+      margin: 0 3px;
+      color: #cccccc;
+    }
+
+    h1.page-title {
+      font-size: 62px;
+      font-weight: 700;
+      color: #777777;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .content-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .card-main {
+      width: 430px;
+      background-color: #efefef;
+      padding: 22px 26px 24px;
+    }
+
+    .card-main h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333333;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .card-main p {
+      font-size: 11px;
+      line-height: 1.44;
+      color: #666666;
+      margin-bottom: 11px;
+    }
+
+    .card-main p:last-of-type {
+      margin-bottom: 16px;
+    }
+
+    .card-callout {
+      width: 222px;
+      background-color: #ef5a28;
+      padding: 20px 20px 22px;
+      margin-top: 18px;
+      margin-right: 45px;
+      color: #ffffff;
+    }
+
+    .card-callout h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .card-callout p {
+      font-size: 11px;
+      line-height: 1.42;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-link .arrow-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px;
+      height: 17px;
+      border-radius: 2px;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .cta-dark {
+      color: #222222;
+    }
+
+    .cta-dark .arrow-icon {
+      background-color: #ef5a28;
+      color: #ffffff;
+    }
+
+    .cta-callout {
+      color: #222222;
+    }
+
+    .cta-callout .arrow-icon {
+      background-color: #ffffff;
+      color: #ef5a28;
+    }
+
+    .bench-strip {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .bench-box {
+      position: relative;
+      width: 250px;
+      height: 150px;
+      background-color: #efefef;
+      border: 1px dashed #c4c4c4;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      color: #777777;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .bench-box img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      font-size: 9px;
+      color: #999999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" data-i18n="nav_work">my work:</a>
+        <a href="graphic-design.html" data-i18n="nav_graphic">graphic design</a>
+        <a href="photography.html" data-i18n="nav_photo">photography</a>
+        <a href="ee.html" class="active" data-i18n="nav_ee">electrical engineering</a>
+        <a href="https://chudbox.us" target="_blank" rel="noopener noreferrer" data-i18n="nav_chud">CHUDbox</a>
+        <a href="about.html" data-i18n="nav_about">; about me</a>
+      </div>
+      <div class="nav-right">
+        <a href="#contact" data-i18n="nav_contact">contact</a>
+        <div class="lang-switcher" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <h1 class="page-title" data-i18n="page_heading">electrical engineering</h1>
+
+  <main class="content-columns">
+    <section class="card-main">
+      <h2 data-i18n="card_title">rf, analog video &amp; hardware</h2>
+      <p data-i18n="p1">
+        Hands-on circuit building, RF modulation, signal diagnostics, and restoring vintage electronics from board level up.
+      </p>
+      <p data-i18n="p2">
+        Focused on practical bench testing, custom DAC/RF experiments, and keeping legacy hardware alive through real engineering.
+      </p>
+      <a href="index.html" class="cta-link cta-dark">
+        <span class="arrow-icon">&#8594;</span>
+        <span data-i18n="cta_back">back home</span>
+      </a>
+    </section>
+
+    <aside class="card-callout">
+      <h2 data-i18n="callout_title">CHUDbox</h2>
+      <p data-i18n="callout_body">
+        VHF RF modulator network and CRT revival build. Visit chudbox.us for project details and updates.
+      </p>
+      <a href="https://chudbox.us" target="_blank" rel="noopener noreferrer" class="cta-link cta-callout">
+        <span class="arrow-icon">&#8594;</span>
+        <span data-i18n="cta_go">chudbox.us</span>
+      </a>
+    </aside>
+  </main>
+
+  <section class="bench-strip">
+    <div class="bench-box">Bench Shot 01</div>
+    <div class="bench-box">Bench Shot 02</div>
+    <div class="bench-box">Bench Shot 03</div>
+  </section>
+
+  <footer id="contact">
+    &copy; 2026 Christopher Morales Soriano @cemso / @kelsoitin
+  </footer>
+</div>
+
+<script>
+  const translations = {
+    en: {
+      nav_work: "my work:",
+      nav_graphic: "graphic design",
+      nav_photo: "photography",
+      nav_ee: "electrical engineering",
+      nav_chud: "CHUDbox",
+      nav_about: "; about me",
+      nav_contact: "contact",
+      page_heading: "electrical engineering",
+      card_title: "rf, analog video & hardware",
+      p1: "Hands-on circuit building, RF modulation, signal diagnostics, and restoring vintage electronics from board level up.",
+      p2: "Focused on practical bench testing, custom DAC/RF experiments, and keeping legacy hardware alive through real engineering.",
+      cta_back: "back home",
+      callout_title: "CHUDbox",
+      callout_body: "VHF RF modulator network and CRT revival build. Visit chudbox.us for project details and updates.",
+      cta_go: "chudbox.us"
+    },
+    es: {
+      nav_work: "mi trabajo:",
+      nav_graphic: "diseño gráfico",
+      nav_photo: "fotografía",
+      nav_ee: "ingeniería eléctrica",
+      nav_chud: "CHUDbox",
+      nav_about: "; sobre mí",
+      nav_contact: "contacto",
+      page_heading: "ingeniería eléctrica",
+      card_title: "rf, video analógico y hardware",
+      p1: "Construcción de circuitos, modulación RF, diagnóstico de señales y restauración de electrónica clásica a nivel de placa.",
+      p2: "Enfocado en pruebas de banco, experimentos de RF/DAC y mantener hardware antiguo funcionando.",
+      cta_back: "volver al inicio",
+      callout_title: "CHUDbox",
+      callout_body: "Proyecto de modulación VHF RF y recuperación CRT. Visita chudbox.us para ver detalles y avances.",
+      cta_go: "chudbox.us"
+    },
+    ja: {
+      nav_work: "制作実績:",
+      nav_graphic: "グラフィックデザイン",
+      nav_photo: "写真",
+      nav_ee: "電気工学",
+      nav_chud: "CHUDbox",
+      nav_about: "; 自己紹介",
+      nav_contact: "連絡先",
+      page_heading: "電気工学",
+      card_title: "RF・アナログ映像・ハードウェア",
+      p1: "回路製作、RF変調、信号測定、基板レベルでのレトロ機器の修理・復元に取り組んでいます。",
+      p2: "実験と実測をベースに、古いハードウェアを動かすための設計を行っています。",
+      cta_back: "ホームへ戻る",
+      callout_title: "CHUDbox",
+      callout_body: "VHF RF変調ネットワークとCRT再活用プロジェクト。詳細は chudbox.us をご覧ください。",
+      cta_go: "chudbox.us"
+    }
+  };
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang-btn").forEach((b) => b.classList.toggle("active", b === btn));
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
